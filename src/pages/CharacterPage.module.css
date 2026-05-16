@@ -1,0 +1,192 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--space-xl);
+}
+
+.avatarSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+}
+
+.nameSection {
+  text-align: center;
+}
+
+.nameDisplay {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.characterName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.editNameBtn {
+  color: var(--color-text-muted);
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+}
+
+.editNameBtn:hover {
+  color: var(--color-primary);
+}
+
+.nameEdit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.nameInput {
+  padding: var(--space-xs) var(--space-sm);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  width: 160px;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.nameInput:focus {
+  outline: none;
+}
+
+.saveNameBtn {
+  color: var(--color-success);
+  padding: var(--space-xs);
+}
+
+.levelLabel {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.wardrobeSection {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.categoryTabs {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-lg);
+}
+
+.categoryTab {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--color-bg-soft);
+  color: var(--color-text-light);
+  transition: all var(--transition-fast);
+}
+
+.categoryTab:hover {
+  background: var(--color-bg-card-hover);
+}
+
+.categoryActive {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-md);
+}
+
+.wardrobeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background: var(--color-bg-soft);
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.wardrobeItem:hover {
+  background: var(--color-bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.wardrobeSelected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.wardrobeEmoji {
+  font-size: 28px;
+}
+
+.wardrobeLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.equippedBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--color-primary);
+  color: white;
+  padding: 1px var(--space-sm);
+  border-radius: var(--radius-full);
+}
+
+.emptyWardrobe {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}

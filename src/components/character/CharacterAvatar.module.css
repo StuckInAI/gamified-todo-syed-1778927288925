@@ -1,0 +1,125 @@
+.avatarContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-bg-soft), var(--color-primary-light));
+  overflow: hidden;
+}
+
+.small {
+  width: 80px;
+  height: 80px;
+}
+
+.medium {
+  width: 160px;
+  height: 160px;
+}
+
+.large {
+  width: 260px;
+  height: 260px;
+}
+
+.background {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+.large .background {
+  font-size: 40px;
+}
+
+.characterBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  animation: float 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.hat {
+  font-size: 20px;
+}
+
+.small .hat {
+  font-size: 14px;
+}
+
+.large .hat {
+  font-size: 36px;
+}
+
+.face {
+  font-size: 36px;
+}
+
+.small .face {
+  font-size: 24px;
+}
+
+.large .face {
+  font-size: 64px;
+}
+
+.outfit {
+  font-size: 18px;
+  margin-top: -4px;
+}
+
+.small .outfit {
+  font-size: 12px;
+}
+
+.large .outfit {
+  font-size: 32px;
+}
+
+.accessory {
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  font-size: 16px;
+}
+
+.small .accessory {
+  font-size: 10px;
+}
+
+.large .accessory {
+  font-size: 28px;
+}
+
+.pet {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 20px;
+  animation: float 2.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+  z-index: 1;
+}
+
+.small .pet {
+  font-size: 14px;
+  bottom: 4px;
+  left: 4px;
+}
+
+.large .pet {
+  font-size: 36px;
+  bottom: 16px;
+  left: 20px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

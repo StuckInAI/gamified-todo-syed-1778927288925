@@ -1,0 +1,220 @@
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  transition: all var(--transition-normal);
+  animation: slideUp 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.done {
+  opacity: 0.7;
+  background: var(--color-bg-soft);
+}
+
+.overdue {
+  border-left: 4px solid var(--color-overdue);
+}
+
+.extended {
+  border-left: 4px solid var(--color-extension);
+}
+
+.soon {
+  border-left: 4px solid var(--color-accent);
+}
+
+.safe {
+  border-left: 4px solid var(--color-secondary);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.priority {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.titleDone {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.rewards {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.xpBadge,
+.coinBadge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-soft);
+}
+
+.xpBadge {
+  color: var(--color-xp);
+}
+
+.coinBadge {
+  color: var(--color-accent-dark);
+}
+
+.description {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+  line-height: 1.5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.deadlineInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.deadlineDate {
+  font-weight: 500;
+}
+
+.extensionBadge {
+  font-size: 11px;
+  background: var(--color-extension);
+  color: white;
+  padding: 1px var(--space-sm);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.statusLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-full);
+}
+
+.status-safe {
+  color: var(--color-success);
+}
+
+.status-soon {
+  color: var(--color-accent-dark);
+}
+
+.status-extended {
+  color: var(--color-extension);
+  background: #FFF3E0;
+}
+
+.status-overdue {
+  color: var(--color-overdue);
+  background: #FFF0F0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.startBtn {
+  background: var(--color-bg-soft);
+  color: var(--color-text-light);
+}
+
+.startBtn:hover {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.completeBtn {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.completeBtn:hover {
+  background: var(--color-secondary-dark);
+  transform: scale(1.05);
+}
+
+.deleteBtn {
+  color: var(--color-text-muted);
+  padding: var(--space-xs);
+  margin-left: auto;
+}
+
+.deleteBtn:hover {
+  color: var(--color-danger);
+}
+
+.completedBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-success);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
